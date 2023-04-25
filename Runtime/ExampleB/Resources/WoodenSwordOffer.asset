@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ced6487d6a471c881c66b4cf56a6ed, type: 3}
+  m_Name: WoodenSwordOffer
+  m_EditorClassIdentifier: 
+  _isEnabled: 1
+  _isDefault: 0
+  _id:
+    Value: 7237125685018781295
+  _item:
+    Id:
+      Value: 7237125684784691059
+    Amount: 1
+  _price:
+  - Id:
+      Value: 7236281191302262627
+    Amount: 50

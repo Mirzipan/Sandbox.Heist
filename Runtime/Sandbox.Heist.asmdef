@@ -1,0 +1,19 @@
+{
+    "name": "Sandbox.Heist",
+    "rootNamespace": "",
+    "references": [
+        "Mirzipan.Bibliotheca",
+        "Mirzipan.Clues",
+        "Mirzipan.Heist",
+        "Reflex"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
