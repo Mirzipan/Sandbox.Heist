@@ -1200,8 +1200,8 @@ GameObject:
   - component: {fileID: 1329520699}
   - component: {fileID: 1329520698}
   - component: {fileID: 1329520701}
-  - component: {fileID: 1329520702}
   - component: {fileID: 1329520703}
+  - component: {fileID: 1329520702}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged

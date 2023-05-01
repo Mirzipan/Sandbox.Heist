@@ -32,7 +32,7 @@ namespace Sandbox.Heist.ExampleB
         [Inject]
         private IDefinitions _definitions;
         [Inject]
-        private IProcessor _processor;
+        private IClientProcessor _processor;
 
         #region Lifecycle
 

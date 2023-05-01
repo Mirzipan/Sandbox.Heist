@@ -18,7 +18,7 @@ namespace Sandbox.Heist.ExampleC
         private Button _resetButton;
 
         [Inject]
-        private IProcessor _processor;
+        private IClientProcessor _processor;
         
         #region Lifecycle
 

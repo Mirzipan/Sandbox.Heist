@@ -14,7 +14,7 @@ namespace Sandbox.Heist.ExampleA
         private Transform _spawnPoint;
         
         [Inject]
-        private IProcessor _processor;
+        private IClientProcessor _processor;
 
         private float _lastTriedAt = 0f;
         
