@@ -13,7 +13,7 @@ namespace Sandbox.Heist.ExampleC.Commands
         
         public class Handler : AActionHandler<Action>
         {
-            protected override ValidationResult Validate(Action action)
+            protected override ValidationResult Validate(Action action, ValidationOptions options)
             {
                 return Pass();
             }

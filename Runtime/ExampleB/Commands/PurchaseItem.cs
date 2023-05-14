@@ -34,7 +34,7 @@ namespace Sandbox.Heist.ExampleB.Commands
             [Inject]
             private Inventory _inventory;
             
-            protected override ValidationResult Validate(Action action)
+            protected override ValidationResult Validate(Action action, ValidationOptions options)
             {
                 if (action.Amount <= 0)
                 {

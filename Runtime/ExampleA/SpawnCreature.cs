@@ -27,7 +27,7 @@ namespace Sandbox.Heist.ExampleA
             [Inject]
             private Spawner _spawner;
             
-            protected override ValidationResult Validate(Action action)
+            protected override ValidationResult Validate(Action action, ValidationOptions options)
             {
                 if (string.IsNullOrEmpty(action.Id))
                 {
