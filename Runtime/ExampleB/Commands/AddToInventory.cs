@@ -1,5 +1,5 @@
 ﻿using Mirzipan.Bibliotheca.Identifiers;
-using Mirzipan.Heist.Commands;
+using Mirzipan.Heist;
 using Reflex.Attributes;
 
 namespace Sandbox.Heist.ExampleB.Commands

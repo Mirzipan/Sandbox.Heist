@@ -1,6 +1,6 @@
 ﻿using Mirzipan.Bibliotheca.Identifiers;
 using Mirzipan.Clues;
-using Mirzipan.Heist.Commands;
+using Mirzipan.Heist;
 using Reflex.Attributes;
 using Sandbox.Heist.ExampleB.Definitions;
 
@@ -34,7 +34,7 @@ namespace Sandbox.Heist.ExampleB.Commands
             [Inject]
             private Inventory _inventory;
             
-            protected override ValidationResult Validate(Action action, ValidationOptions options)
+            protected override ValidationResult Validate(Action action, int clientId, ValidationOptions options)
             {
                 if (action.Amount <= 0)
                 {
@@ -64,17 +64,17 @@ namespace Sandbox.Heist.ExampleB.Commands
                 return Pass();
             }
 
-            protected override void Process(Action action)
+            protected override void Process(Action action, int clientId)
             {
                 var definition = _definitions.Get<ShopOfferDefinition>(action.OfferId);
                 
                 for (int i = 0; i < definition.Price.Length; i++)
                 {
                     var price = definition.Price[i] * action.Amount;
-                    Enqueue(new RemoveFromInventory.Command(price.Id, price.Amount));
+                    Enqueue(new RemoveFromInventory.Command(price.Id, price.Amount), clientId, ExecuteOn.OneClientAndServer);
                 }
                 
-                Enqueue(new AddToInventory.Command(definition.Item.Id, definition.Item.Amount * action.Amount));
+                Enqueue(new AddToInventory.Command(definition.Item.Id, definition.Item.Amount * action.Amount),clientId, ExecuteOn.OneClientAndServer);
             }
         }
     }

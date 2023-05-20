@@ -1,4 +1,4 @@
-﻿using Mirzipan.Heist.Commands;
+﻿using Mirzipan.Heist;
 using Reflex.Attributes;
 using UnityEngine;
 
@@ -27,7 +27,7 @@ namespace Sandbox.Heist.ExampleA
             [Inject]
             private Spawner _spawner;
             
-            protected override ValidationResult Validate(Action action, ValidationOptions options)
+            protected override ValidationResult Validate(Action action, int clientId, ValidationOptions options)
             {
                 if (string.IsNullOrEmpty(action.Id))
                 {
@@ -48,9 +48,9 @@ namespace Sandbox.Heist.ExampleA
                 return Pass();
             }
 
-            protected override void Process(Action action)
+            protected override void Process(Action action, int clientId)
             {
-                Enqueue(new Command(action.Id, action.Position, action.Rotation));
+                Enqueue(new Command(action.Id, action.Position, action.Rotation), ExecuteOn.AllClientsAndServer);
             }
 
             private static ValidationResult Fail()

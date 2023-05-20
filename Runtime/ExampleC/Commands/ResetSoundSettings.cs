@@ -1,4 +1,4 @@
-﻿using Mirzipan.Heist.Commands;
+﻿using Mirzipan.Heist;
 using Reflex.Attributes;
 
 namespace Sandbox.Heist.ExampleC.Commands
@@ -11,14 +11,14 @@ namespace Sandbox.Heist.ExampleC.Commands
         
         public class Handler : AActionHandler<Action>
         {
-            protected override ValidationResult Validate(Action action, ValidationOptions options)
+            protected override ValidationResult Validate(Action action, int clientId, ValidationOptions options)
             {
                 return Pass();
             }
 
-            protected override void Process(Action action)
+            protected override void Process(Action action, int clientId)
             {
-                Enqueue(new Command());
+                Enqueue(new Command(), clientId, ExecuteOn.OneClient);
             }
         }
 
