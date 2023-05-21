@@ -23,7 +23,7 @@ namespace Sandbox.Heist.ExampleB.Commands
             [Inject]
             private Inventory _inventory;
             
-            protected override void Execute(Command command)
+            protected override void Execute(Command command, ExecutionOptions options)
             {
                 _inventory.Add(command.Id, command.Amount);
                 

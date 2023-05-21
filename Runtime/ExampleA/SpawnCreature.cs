@@ -78,7 +78,7 @@ namespace Sandbox.Heist.ExampleA
             [Inject]
             private Spawner _spawner;
             
-            protected override void Execute(Command command)
+            protected override void Execute(Command command, ExecutionOptions options)
             {
                 _spawner.Spawn(command.Id, command.Position, command.Rotation);
                 

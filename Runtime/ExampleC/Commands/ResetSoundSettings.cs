@@ -31,7 +31,7 @@ namespace Sandbox.Heist.ExampleC.Commands
             [Inject]
             private AudioManager _audioManager;
             
-            protected override void Execute(Command command)
+            protected override void Execute(Command command, ExecutionOptions options)
             {
                 _audioManager.ResetMusicVolume();
                 _audioManager.ResetVFXVolume();
